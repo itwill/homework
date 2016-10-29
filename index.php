@@ -46,7 +46,21 @@ define("MORNING", "Утро");
 echo MORNING;
 ?>
 
+<h3>Задание 4</h3><br>
+<?php
+$age = 15;
+echo "Возраст ".$age." лет<br>";
 
+if (($age>=18)&&($age <= 65))
+    echo "Вам еще работать и работать";
+elseif ($age > 65)
+    echo "Вам пора на пенсию";
+elseif (($age >= 1) && ( $age <= 17))
+    echo "Вам еще рано работать";
+else
+    echo "<br>Неизвестный возраст";
+
+?>
 
 </body>
 </html>
