@@ -5,8 +5,9 @@
     <title>Document</title>
 </head>
 <body>
-<h3>Задание 1</h3><br>
 <?php
+echo "<h3>Задание 1</h3><br>";
+
 $name = "Svetlana";
 $age = "100";
 echo "Меня зовут " . $name."<br>";
@@ -19,10 +20,10 @@ echo "/ слэш<br>";
 echo "' кавычка<br>";
 echo "\" двойная кавычка<br>";
 echo "\\ обратный слэш<br>";
-?>
 
-<h3>Задание 2</h3><br>
-<?php
+
+echo "<h3>Задание 2</h3><br>";
+
 $sum = 80;
 $a = 23;
 $b = 40;
@@ -31,10 +32,10 @@ echo "Всего рисунков: ".$sum."<br>";
 echo "Фломастерами выполнено: ".$a."<br>";
 echo "Карандашами: ".$b."<br>";
 echo "Красками на школьной выставке выполнено: <b>".$c."</b> рисунков";
-?>
 
-<h3>Задание 3</h3><br>
-<?php
+
+echo "<h3>Задание 3</h3><br>";
+
 define("MORNING", "Доброе утро!");
 define("MORNING", NULL);
 if ( defined("MORNING")== true )echo "Константа объявлена<br>";
@@ -44,23 +45,49 @@ echo "Константа MORNING = ".MORNING."<br>";
 echo "Меняем значение константы на Утро и выводим:<br>";
 define("MORNING", "Утро");
 echo MORNING;
-?>
 
-<h3>Задание 4</h3><br>
-<?php
+
+echo "<h3>Задание 4</h3><br>";
+
 $age = 15;
 echo "Возраст ".$age." лет<br>";
 
-if (($age>=18)&&($age <= 65))
+if (($age>=18)&&($age <= 65)):
     echo "Вам еще работать и работать";
-elseif ($age > 65)
+elseif ($age > 65):
     echo "Вам пора на пенсию";
-elseif (($age >= 1) && ( $age <= 17))
+elseif (($age >= 1) && ( $age <= 17)):
     echo "Вам еще рано работать";
-else
+else:
     echo "<br>Неизвестный возраст";
+endif;
+
+echo "<h3>Задание 5</h3><br>";
+$day = 20;
+echo "День: ".$day."<br>";
+switch ($day) {
+    case (($day < 1) || ($day > 7)) :
+    {
+        echo "Неизвестный день";
+        break;
+    }
+    case (($day >= 1) && ($day <=5)) :
+        {
+            echo "Это рабочий день";
+            break;
+        }
+    case (($day = 6) || ($day = 7)) :
+        {
+            echo "Это выходной день";
+            break;
+        }
+
+}
 
 ?>
+
+
+
 
 </body>
 </html>
