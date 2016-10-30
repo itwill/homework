@@ -73,7 +73,7 @@ switch ($day) {
         echo "Неизвестный день";
         break;
     }
-    case (($day >= 1) && ($day <=5)) :
+    case (($day >= 1) && ($day <= 5)) :
         {
             echo "Это рабочий день";
             break;
@@ -86,7 +86,37 @@ switch ($day) {
 }
 
 echo "<h3>Задание 6</h3><br>";
+$bmv = array(
+    "model" => "X5",
+    "speed"=>"120",
+    "doors"=>"5",
+    "year"=>"2015",
+);
 
+$toyota = array(
+    "model" => "prado",
+    "speed"=>"160",
+    "doors"=>"5",
+    "year"=>"2014",
+);
+
+$opel = array(
+    "model" => "astra",
+    "speed"=>"80",
+    "doors"=>"5",
+    "year"=>"2008",
+);
+
+$auto = array(
+    "bmv" => $bmv,
+    "toyota" => $toyota,
+    "opel" => $opel
+);
+
+foreach ($auto as $key => $value) {
+    echo "Car $key <br>";
+    echo "{$value["model"]}, {$value["speed"]}, {$value["doors"]}, {$value["year"]}<br>";
+}
 
 ?>
 </body>
