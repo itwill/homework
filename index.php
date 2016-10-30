@@ -38,8 +38,10 @@ echo "<h3>Задание 3</h3><br>";
 
 define("MORNING", "Доброе утро!");
 define("MORNING", NULL);
-if ( defined("MORNING")== true )echo "Константа объявлена<br>";
+
+if (defined("MORNING") == true) echo "Константа объявлена<br>";
 else echo "Константа не объявлена<br>";
+
 echo "Константа MORNING = ".MORNING."<br>";
 
 echo "Меняем значение константы на Утро и выводим:<br>";
@@ -81,13 +83,11 @@ switch ($day) {
             echo "Это выходной день";
             break;
         }
-
 }
 
+echo "<h3>Задание 6</h3><br>";
+
+
 ?>
-
-
-
-
 </body>
 </html>
