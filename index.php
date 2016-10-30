@@ -37,10 +37,13 @@ echo "Красками на школьной выставке выполнено
 echo "<h3>Задание 3</h3><br>";
 
 define("MORNING", "Доброе утро!");
-define("MORNING", NULL);
+define("MORNING", null);
 
-if (defined("MORNING") == true) echo "Константа объявлена<br>";
-else echo "Константа не объявлена<br>";
+if (defined("MORNING") == true) {
+    echo "Константа объявлена<br>";
+} else {
+    echo "Константа не объявлена<br>";
+}
 
 echo "Константа MORNING = " . MORNING . "<br>";
 
@@ -119,12 +122,13 @@ echo "<h3>Задание 7</h3><br>";
 
 for ($a = 1; $a <= 10; $a++) {
     for ($b = 1; $b <= 10; $b++) {
-        if (($a % 2) == 0 && ($b % 2) == 0)
+        if (($a % 2) == 0 && ($b % 2) == 0) {
             echo "$a * $b = (" . $a * $b . ")<br>";
-        elseif (($a % 2) == 1 && ($b % 2) == 1)
+        } elseif (($a % 2) == 1 && ($b % 2) == 1) {
             echo "$a * $b = [" . $a * $b . "]<br>";
-        else
+        } else {
             echo "$a * $b = " . $a * $b . "<br>";
+        }
     }
 }
 
