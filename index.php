@@ -131,6 +131,25 @@ for ($a = 1; $a <= 10; $a++) {
     }
 }
 
+echo "<h3>Задание 8</h3><br>";
+
+$str = "Мое задание по синтаксису PHP почти готово";
+echo $str . "<br>";
+$str_arr = explode(" ", $str);
+print_r($str_arr);
+//var_dump($new_str);
+$new_str_arr = [];
+$kol = count($str_arr);// всего элементов
+$k = $kol-1; // номер последнего элемента для цикла
+do {
+    $new_str_arr[] = $str_arr[$k];
+    $k--;
+} while ($k >= 0);
+
+echo "<br>";
+print_r($new_str_arr);
+echo "<br>";
+echo implode("|", $new_str_arr);
 
 ?>
 </body>
