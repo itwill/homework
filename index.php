@@ -118,6 +118,20 @@ foreach ($auto as $key => $value) {
     echo "{$value["model"]}, {$value["speed"]}, {$value["doors"]}, {$value["year"]}<br>";
 }
 
+echo "<h3>Задание 7</h3><br>";
+
+for ($a = 1; $a <= 10; $a++) {
+    for ($b = 1; $b <= 10; $b++) {
+        if (($a % 2) == 0 && ($b % 2) == 0)
+            echo "$a * $b = (" . $a * $b . ")<br>";
+        elseif (($a % 2) == 1 && ($b % 2) == 1)
+            echo "$a * $b = [" . $a * $b . "]<br>";
+        else
+            echo "$a * $b = " . $a * $b . "<br>";
+    }
+}
+
+
 ?>
 </body>
 </html>
