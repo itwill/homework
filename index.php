@@ -65,10 +65,10 @@ else:
 endif;
 
 echo "<h3>Задание 5</h3><br>";
-$day = 20;
+$day = 0;
 echo "День: " . $day . "<br>";
 switch ($day) {
-    case (($day < 1) || ($day > 7)) : {
+    case (($day < 0) || ($day > 7)) : {
         echo "Неизвестный день";
         break;
     }
@@ -80,6 +80,8 @@ switch ($day) {
         echo "Это выходной день";
         break;
     }
+    default:
+        break;
 }
 
 echo "<h3>Задание 6</h3><br>";
