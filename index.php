@@ -7,6 +7,7 @@
 <body>
 <?php
 echo "<h3>Задание 1</h3><br>";
+// Принято
 
 $name = "Svetlana";
 $age = "100";
@@ -23,6 +24,7 @@ echo "\\ обратный слэш<br>";
 
 
 echo "<h3>Задание 2</h3><br>";
+// Принято
 
 $sum = 80;
 $a = 23;
@@ -35,12 +37,16 @@ echo "Красками на школьной выставке выполнено
 
 
 echo "<h3>Задание 3</h3><br>";
+// Принято
 
 define("MORNING", "Доброе утро!");
-define("MORNING", NULL);
+define("MORNING", null);
 
-if (defined("MORNING") == true) echo "Константа объявлена<br>";
-else echo "Константа не объявлена<br>";
+if (defined("MORNING") == true) {
+    echo "Константа объявлена<br>";
+} else {
+    echo "Константа не объявлена<br>";
+}
 
 echo "Константа MORNING = " . MORNING . "<br>";
 
@@ -50,6 +56,7 @@ echo MORNING;
 
 
 echo "<h3>Задание 4</h3><br>";
+// Принято
 
 $age = 15;
 echo "Возраст " . $age . " лет<br>";
@@ -65,10 +72,13 @@ else:
 endif;
 
 echo "<h3>Задание 5</h3><br>";
-$day = 0;
+// Принято
+// Хорошим тоном является добавление секции defalut: , пусть даже только с break; с содержании
+
+$day = 20;
 echo "День: " . $day . "<br>";
 switch ($day) {
-    case (($day < 0) || ($day > 7)) : {
+    case (($day < 1) || ($day > 7)) : {
         echo "Неизвестный день";
         break;
     }
@@ -80,11 +90,11 @@ switch ($day) {
         echo "Это выходной день";
         break;
     }
-    default:
-        break;
 }
 
 echo "<h3>Задание 6</h3><br>";
+// Принято
+
 $bmv = array(
     "model" => "X5",
     "speed" => "120",
@@ -118,19 +128,22 @@ foreach ($auto as $key => $value) {
 }
 
 echo "<h3>Задание 7</h3><br>";
+// Принято
 
 for ($a = 1; $a <= 10; $a++) {
     for ($b = 1; $b <= 10; $b++) {
-        if (($a % 2) == 0 && ($b % 2) == 0)
+        if (($a % 2) == 0 && ($b % 2) == 0) {
             echo "$a * $b = (" . $a * $b . ")<br>";
-        elseif (($a % 2) == 1 && ($b % 2) == 1)
+        } elseif (($a % 2) == 1 && ($b % 2) == 1) {
             echo "$a * $b = [" . $a * $b . "]<br>";
-        else
+        } else {
             echo "$a * $b = " . $a * $b . "<br>";
+        }
     }
 }
 
 echo "<h3>Задание 8</h3><br>";
+// Принято
 
 $str = "Мое задание по синтаксису PHP почти готово";
 echo $str . "<br>";
